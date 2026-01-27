@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Noto+Serif+JP:wght@200..900&display=swap');
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.card-container {
+
+    perspective: 1000px;
+    margin: 50px 0;
+    margin-bottom: 30px;
+
+}
+
+#card-image {
+    width: 200px; /* カードの幅 */
+    height: 280px; /* カードの高さ */
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    object-fit: cover;
+    transition: transform 0.5s;
+    background-color: #ddd; 画像がない時用
+}
+
+/* カードが切り替わる時の少しのアニメーション */
+.shake {
+    animation: shake 0.5s;
+}
+
+@keyframes shake {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #8d2b6c;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-bottom: 50px;
+}
+
+button:hover {
+    background-color: #14748c;
+}
+
+body{
+  font-family: "Jost",  "Noto Serif JP",sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+ 
+  line-height: 1.8;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  letter-spacing: 1.1px;
+}
+
+body {
+  /* font-family: sans-serif; */
+  background: #fff;
+  color: #333;
+}
+
+a{
+  transition: all .3s;
+}
+
+
+.header {
+  margin: 50px 0 0;
+  /* padding: 40px; */
+  text-align: center;
+  font-family: "jost";
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+  padding: 40px;
+}
+
+.gallery-item {
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .4s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+/* モーダル */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.modal-inner img {
+  max-width: 90vw;
+  max-height: 90vh;
+}
+
+
+ /* 基本スタイル */
+ ul {
+  list-style-type: none;
+  margin: 50px 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+
+}
+
+li a {
+  display: block;
+  color: rgb(171, 171, 171);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+/* ホバー時の色変更 */
+li a:hover {
+  color: #ff1e1e;
+}
+
+.greeting {
+  text-align: center;
+color: lightgray  ;
+  margin-bottom: 15px;
+}
+
+.copyright{
+  text-align: center;
+  font-size: 14px;
+  color: rgb(156, 155, 155);
+  margin-bottom: 15px;
+}
+
+.pastel-rainbow-text {
+  /* font-size: 48px; */
+  /* font-weight: bold; */
+  /* パステルカラーの虹色グラデーション */
+  background: linear-gradient(
+    90deg,
+    #ff7a7a, #ff7f00, #a0ac00, #128381, #068269, #6a4386
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text; /* 文字で切り抜く */
+  background-clip: text;
+  color: transparent; /* 文字自体を透明にする */
+  animation: rainbow-animation 4s linear infinite; /* アニメーション（任意） */
+  border: 1px solid lightgrey;
+
+}
+
+
+
+
+@media screen and (max-width: 767px) {/* スクリーンサイズが767px以下の場合に適用 */
+
+  header{
+    display: flex;
+   
+  }
+ul {
+  width: 100vw;
+  display: flex;
+/* flex-direction: column;
+align-items: center; */
+flex-wrap: wrap;
+justify-content: center;
+}
+
+} 
