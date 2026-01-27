@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Gallery Sample</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- jQuery（CDN） -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+          integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+          crossorigin="anonymous"></script>
+
+  <!-- JS -->
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <style>
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        margin: 0;
+    }
+
+    .card-container {
+
+        perspective: 1000px;
+        margin: 50px 0;
+        margin-bottom: 30px;
+
+    }
+
+    #card-image {
+        width: 200px; /* カードの幅 */
+        height: 280px; /* カードの高さ */
+        border-radius: 15px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        object-fit: cover;
+        transition: transform 0.5s;
+        background-color: #ddd; 画像がない時用
+    }
+
+    /* カードが切り替わる時の少しのアニメーション */
+    .shake {
+        animation: shake 0.5s;
+    }
+
+    @keyframes shake {
+        0% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+        100% { transform: translateY(0); }
+    }
+
+    button {
+        padding: 15px 30px;
+        font-size: 18px;
+        background-color: #8d2b6c;
+        color: white;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: background 0.3s;
+        margin-bottom: 50px;
+    }
+
+    button:hover {
+        background-color: #14748c;
+    }
+</style>
+</head>
+<body>
+
+
+
+<header class="header">
+  <h1><img src="img/IMG_9010.PNG" style="width: 100px;" alt="">Daily Unique!</h1>
+</header>
+<ul>
+  <li><a href="gallery.html">Home</a></li>
+  <li><a href="#about">About</a></li>
+  <li><a href="#news">News</a></li>
+  <li><a href="#news">Word World</a></li>
+  <li><a href="#news">Fragment</a></li>
+  <li><a href="#contact">Contact</a></li>
+</ul>
+
+<main>
+  <p>fragment 慧眼　審美眼　sow sou soul spiral まわる　めぐる　粒　波　photon 微細　振動　色即是空 etymology root foot </p>
+</main>
