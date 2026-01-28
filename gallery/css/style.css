@@ -25,7 +25,7 @@ body {
     box-shadow: 0 10px 20px rgba(0,0,0,0.2);
     object-fit: cover;
     transition: transform 0.5s;
-    background-color: #ddd; 画像がない時用
+    background-color: #ddd; 
 }
 
 /* カードが切り替わる時の少しのアニメーション */
@@ -78,7 +78,10 @@ body {
 }
 
 a{
+  display: block;
+  width: 100%;
   transition: all .3s;
+  text-decoration: none;
 }
 
 
@@ -202,3 +205,54 @@ justify-content: center;
 }
 
 } 
+
+
+
+.article {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.article-header {
+  margin-bottom: 80px;
+}
+
+.article-header h1 {
+  font-size: 28px;
+  font-weight: normal;
+  letter-spacing: 0.05em;
+  margin-bottom: 10px;
+}
+
+.meta {
+  font-size: 12px;
+  color: #777;
+}
+
+.block {
+  margin-bottom: 80px;
+}
+
+.block img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.block.text {
+  font-size: 15px;
+  line-height: 2;
+}
+
+.caption {
+  margin-top: 12px;
+  font-size: 13px;
+  color: #555;
+  line-height: 1.8;
+}
+
+.caption.small {
+  font-size: 11px;
+  color: #777;
+}
